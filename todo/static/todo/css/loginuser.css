@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.circle {
+    position: absolute;
+    z-index: 1;
+    width: 516px;
+    height: 516px;
+    border-radius: 50%;
+    background: radial-gradient(72.13% 72.13% at 22.81% 23.49%, rgba(160, 204, 255, 0.25) 0%, rgba(162, 208, 250, 0.13) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;    filter: blur(16px);
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+main {
+    background: #89AED0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form-container {
+    position: relative;
+    z-index: 2;
+    width: 354px;
+    height: 314px;
+    background: rgba(241,241,241, 0.5);
+    border-radius: 50px;
+    padding-top: 33px;
+}
+
+.form-title {
+    width: 52px;
+    height: 24px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+    margin-bottom: 32px;
+    padding-left: 151px;
+}
+
+input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 25px;
+
+    outline: none;
+    width: 276px;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+
+.form-fields {
+    padding-left: 39px;
+}
+
+button {
+    border:none;
+    width: 138px;
+    height: 45px;
+    background: #22A2FF;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    text-transform: uppercase;
+
+}
+
+.form-buttons {
+    margin-top: 0px;
+    padding-left: 70px;
+}
+
+.button-back {
+    margin-top: 63px;
+}
+
+button:hover {
+    background: #34AAFF;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);}
+
+button:active {
+    background: #147FCC;
+    border-top: 3px solid #016197;
+    border-radius: 20px;
+}

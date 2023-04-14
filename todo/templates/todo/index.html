@@ -1,0 +1,31 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block css_addition %}
+    <link rel="stylesheet" href="{% static 'todo/css/index.css' %}">
+{% endblock css_addition %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <div class="header">
+            <div class="header-line">
+                <div class="header-logo">
+                    <a href="{% url 'index' %}">
+                        <img class="logo" src="{% static 'todo/images/logo.png' %}" alt="logo">
+                    </a>
+                </div>
+                <div class="nav">
+                    <a href="{% url 'register' %}" class="nav-item">Регистрация</a>
+                    <a href="{% url 'loginuser' %}" class="nav-item">Войти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 class="text">Содержимое главной страницы</h1>
+    </div>
+</main>
+{% endblock %}

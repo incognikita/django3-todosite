@@ -1,0 +1,40 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block css_addition %}
+    <link rel="stylesheet" href="{% static 'todo/css/loginuser.css' %}">
+{% endblock css_addition %}
+
+{% block content %}
+
+<main>
+    <div class="circle"></div>
+    <div class="auth-form-container">
+        <h1 class="form-title">
+            Вход
+        </h1>
+        <div class="form-fields">
+            <div class="form-field">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <h6>{{ error }}</h6>
+                    {% for f in form %}
+                        {{ f }}
+                    {% endfor %}
+                    <div class="form-buttons">
+                        <div class="button-auth">
+                            <button type="submit">Вход</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-buttons">
+                    <form class="button-back" action="{% url 'index' %}">
+                        <button>Назад</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

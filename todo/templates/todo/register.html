@@ -1,0 +1,38 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block css_addition %}
+    <link rel="stylesheet" href="{% static 'todo/css/register.css' %}">
+{% endblock css_addition %}
+
+{% block content %}
+<!-- Окно регистрации -->
+<main>
+    <div class="circle"></div>
+        <div class="register-form-container">
+            <h1 class="form-title">
+                Регистрация
+            </h1>
+            <div class="form-fields">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <h6>{{ error }}</h6>
+                    {% for f in form %}
+                    <div class="form-field">
+                        {{ f }}
+                    </div>
+                    {% endfor %}
+
+                    <button class="button-register" type="submit">Регистрация</button>
+                </form>
+
+                <form action="{% url 'index' %}">
+                    <button class="button-back">Назад</button>
+                </form>
+            </div>
+        </div>
+</main>
+
+
+{% endblock %}

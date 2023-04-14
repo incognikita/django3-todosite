@@ -1,0 +1,76 @@
+body {
+    margin: 0px;
+    background: #89AED0;
+}
+
+.logo {
+    width: 46px;
+    height: 46px;
+    margin: 6px 26px;
+}
+
+.container {
+    width: 1184px;
+    height: 58px;
+
+    background: radial-gradient(408.78% 38778.38% at 124.87% -117.57%, #006382 0%, rgba(0, 255, 240, 0.41) 50.89%, #006382 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+
+    margin: 48px 368px;
+}
+
+.header-line {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    position: relative;
+    left: 766px;
+    margin-bottom: 3px;
+}
+
+.nav-item {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+    margin-right: 42px;
+    transition: color 0.3s ease-out;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text {
+    width: 814px;
+    height: 59px;
+    left: 313px;
+    top: 483px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+
+    color: #FFFFFF;
+
+    margin-top: 377px;
+}
+
+.nav-item:hover {
+
+    color: #A5D4FF;
+}

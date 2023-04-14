@@ -1,0 +1,25 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block css_addition %}
+<link rel="stylesheet" href="{% static 'todo/css/personal_area.css' %}">
+{% endblock css_addition %}
+
+{% block content %}
+
+<main>
+    <div class="form-hello-user">
+        <div class="text-for-user">
+            Вы вошли как - {{ user.username|title }}
+        </div>
+    </div>
+    <div class="button-logout">
+        <form method="post" action="{% url 'logoutuser' %}">
+            {% csrf_token %}
+            <button type="submit">Выйти</button>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

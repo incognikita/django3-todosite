@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background: #89AED0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.form-hello-user {
+    width: 868px;
+    height: 108px;
+    background: rgba(241,241,241, 0.5);
+
+    border-radius: 50px;
+}
+
+.text-for-user {
+    width: 687px;
+    height: 59px;
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 59px;
+
+    color: #000000;
+
+    margin-left: 85px;
+    padding-top: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border:none;
+    width: 146px;
+    height: 45px;
+    left: 647px;
+    top: 606px;
+
+    background: #22A2FF;
+    border-radius: 20px;
+
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+    margin-top: 49px;
+
+}
+
+button:hover {
+    background: #34AAFF;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);}
+
+button:active {
+    background: #147FCC;
+    border-top: 3px solid #016197;
+    border-radius: 20px;
+}
