@@ -1,0 +1,12 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<h1>Окно создания новых заметок</h1>
+<form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">
+        Создать заметку
+    </button>
+</form>
+{% endblock content %}
