@@ -1,6 +1,9 @@
 from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+
+from .models import ToDo
 
 
 class RegistrationUserForm(UserCreationForm):
@@ -20,3 +23,9 @@ class RegistrationUserForm(UserCreationForm):
 class CustomAuthForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Логин'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Пароль'}))
+
+
+class TodoForm(ModelForm):
+    class Meta:
+        model = ToDo
+        fields = ('title', 'content', 'is_published')

@@ -1,12 +1,19 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
+from .models import ToDo
 from .forms import *
 
 
 def index(request):
     context = {
         'title': 'Главная страница',
+        'todos': ''
     }
+
+    # Вывод заметок, созданных конкретным пользователем
+    if request.user.is_authenticated:
+        current_todos = ToDo.objects.filter(user=request.user)
+        context['todos'] = current_todos
     return render(request, 'todo/index.html', context=context)
 
 
@@ -64,3 +71,25 @@ def personal_area(request):
     }
 
     return render(request, 'todo/personal_area.html', context=context)
+
+
+def create_todo(request):
+    form = TodoForm
+
+    context = {
+        'title': 'Заметки',
+        'form': form,
+        'error': ''
+    }
+
+    if request.method == 'POST':
+        try:
+            form = TodoForm(request.POST)
+            newtodo = form.save(commit=False)
+            newtodo.user = request.user
+            newtodo.save()
+            return redirect('index')
+        except ValueError:
+            context['error'] = 'Переданы неверные данные'
+            return render(request, 'todo/create_todo.html', context=context)
+    return render(request, 'todo/create_todo.html', context=context)
